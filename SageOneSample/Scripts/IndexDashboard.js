@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#btnSubmitPuzzle').click(function () { handle_btnSubmitPuzzle_click(); });
+    $('#btnSubmitPuzzle').click(function () { RenderContent(); });
     $("#btnPostDBCall").click(function () { RenderContent(); });
     $("#btnPostAPICall").click(function () { RenderContent(); });
 });
@@ -23,7 +23,6 @@ function PostToSage() {
 
 function handle_btnSubmitPuzzle_click() {
     var pageSudokuPuzzle = $('#sudokustring').val();
-    //alert(pageSudokuPuzzle);
     showSudokuPuzzleNoAjax(pageSudokuPuzzle);
     //showSudokuPuzzle(pageSudokuPuzzle);
 }
