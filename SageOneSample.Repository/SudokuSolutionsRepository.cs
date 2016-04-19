@@ -8,12 +8,13 @@ namespace SageOneSample.Repository
 {
     public class SudokuSolutionsRepository : ISudokuSolutionsRepository
     {
-        public string GetSample()
+        public Puzzle GetSample()
         {
+
             throw new NotImplementedException();
         }
 
-        public string GetSolutionByPuzzle(string partialPuzzle)
+        public Puzzle GetSolutionByPuzzle(string partialPuzzle)
         {
             throw new NotImplementedException();
         }

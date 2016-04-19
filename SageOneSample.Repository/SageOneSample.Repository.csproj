@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ISudokuSolutionsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Puzzle.cs" />
     <Compile Include="SudokuSolutionsRepository.cs" />
   </ItemGroup>
   <ItemGroup>

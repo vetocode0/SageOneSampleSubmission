@@ -15,43 +15,53 @@ namespace SageOneSample.Controllers
         {
             _solutionFinder = solutionFinder;
         }
+
         // GET: Sudoku
         public ActionResult Index()
         {
             return View();
         }
+
         public ActionResult Sudoku(string puzzleInputs)
         {
-            var solution = _solutionFinder.GetPuzzle();
-            SudokuViewModel svm = new SudokuViewModel()
-            {
-                PuzzlePiecesJsonObject = solution.PuzzlePiecesNumbers,
-                PuzzlePieces = solution.PuzzlePiecesStrings
-            };
-            return View(svm);
+            return View(BuildViewModel(puzzleInputs));
         }
         [HttpPost]
-        public JsonResult SudokuSolver(string puzzlePieces)
+        public JsonResult SolvedSudokuJson(string puzzlePieces)
         {
-            var solution = _solutionFinder.GetPuzzle(puzzlePieces);
-            SudokuViewModel svm = new SudokuViewModel()
-            {
-                PuzzlePiecesJsonObject = solution.PuzzlePiecesNumbers,
-                PuzzlePieces = solution.PuzzlePiecesStrings
-            };
+            var svm = BuildViewModel(puzzlePieces);
             return Json(svm.PuzzlePieces, JsonRequestBehavior.AllowGet);
         }
         public ActionResult SolvedPuzzle(string puzzleInputs)
         {
-            var solution = _solutionFinder.GetPuzzle(puzzleInputs);
+            
+            return View(BuildViewModel(puzzleInputs));
+        }
+
+
+
+        public SudokuViewModel BuildViewModel()
+        {
+            var solution = _solutionFinder.GetPuzzle();
+
             SudokuViewModel svm = new SudokuViewModel()
             {
                 PuzzlePiecesJsonObject = solution.PuzzlePiecesNumbers,
                 PuzzlePieces = solution.PuzzlePiecesStrings
             }; ;
-            return View(svm);
-            //SudokuSolver sSolver = new SudokuSolver(puzzleInputs);
-            //return View(sSolver);
+            return svm;
+        }
+
+        public SudokuViewModel BuildViewModel(string puzzleInput)
+        {
+            var solution = _solutionFinder.GetPuzzle(puzzleInput);
+
+            SudokuViewModel svm = new SudokuViewModel()
+            {
+                PuzzlePiecesJsonObject = solution.PuzzlePiecesNumbers,
+                PuzzlePieces = solution.PuzzlePiecesStrings
+            }; ;
+            return svm;
         }
     }
 }

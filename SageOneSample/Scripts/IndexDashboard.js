@@ -24,7 +24,7 @@ function PostToSage() {
 function handle_btnSubmitPuzzle_click() {
     var pageSudokuPuzzle = $('#sudokustring').val();
     showSudokuPuzzleNoAjax(pageSudokuPuzzle);
-    //showSudokuPuzzle(pageSudokuPuzzle);
+    showSudokuPuzzle(pageSudokuPuzzle);
 }
 
 function showSudokuPuzzleNoAjax(data) {
