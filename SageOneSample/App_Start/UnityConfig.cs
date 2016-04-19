@@ -40,7 +40,7 @@ namespace SageOneSample.App_Start
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<IFindSolution, FindSolution>();
-            container.RegisterType<ISudokuSolutionsRepository, SudokuSolutionsRepository>();
+            container.RegisterType<ISudokuSolutionsRepository, FakeSudokuSolutionsRepository>();
 
         }
     }

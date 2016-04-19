@@ -24,7 +24,18 @@ namespace SageOneSample.Controllers
 
         public ActionResult Sudoku(string puzzleInputs)
         {
-            return View(BuildViewModel(puzzleInputs));
+            //TODO: Implement real validation
+            if (puzzleInputs.Length < 81)
+            {
+                var sudokuViewModel = BuildViewModel();
+                return View(sudokuViewModel);
+            }
+            else
+            {
+                var sudokuViewModel = BuildViewModel(puzzleInputs);
+                return View(sudokuViewModel);
+            }
+            
         }
         [HttpPost]
         public JsonResult SolvedSudokuJson(string puzzlePieces)
@@ -39,7 +50,7 @@ namespace SageOneSample.Controllers
         }
 
 
-
+        #region UtilityFunctions
         public SudokuViewModel BuildViewModel()
         {
             var solution = _solutionFinder.GetPuzzle();
@@ -63,5 +74,7 @@ namespace SageOneSample.Controllers
             }; ;
             return svm;
         }
+        #endregion UtilityFunctions
+
     }
 }

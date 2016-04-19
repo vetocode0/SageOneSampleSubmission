@@ -17,9 +17,29 @@ namespace SageOneSample.Business
         }
         public SudokuPuzzle GetPuzzle()
         {
-            _repo.GetSample();
-            
-            throw new NotImplementedException();
+            var Results = _repo.GetSample();
+            List<string> inputparsed = new List<string>();
+            SudokuPuzzle ProcessedPuzzleResults = new SudokuPuzzle()
+            {
+                id = Results.id,
+                puzzle = Results.puzzle,
+            };
+            char[] delim = { ',' };
+            string[] inputs = ProcessedPuzzleResults.puzzle.Split(delim);
+            foreach (string s in inputs)
+            {
+                if(s == "")
+                {
+                    inputparsed.Add("-");
+                }
+                else
+                {
+                    inputparsed.Add(s);
+                }
+                ProcessedPuzzleResults.PuzzlePiecesStrings = inputparsed;
+                //ProcessedPuzzleResults.PuzzlePiecesNumbers.Add(Convert.ToInt32(s));
+            }
+            return ProcessedPuzzleResults;
         }
 
         public SudokuPuzzle GetPuzzle(string incompletePuzzle)

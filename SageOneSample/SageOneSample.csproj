@@ -201,6 +201,8 @@
     <Content Include="Views\Sudoku\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Sudoku\SolvedPuzzle.cshtml" />
+    <Content Include="Views\Sudoku\Sudoku.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#btnSubmitPuzzle').click(function () { RenderContent(); });
+    $('#btnSubmitPuzzle').click(function () { Handle_btnSubmitPuzzle_Click(); });
     $("#btnPostDBCall").click(function () { RenderContent(); });
     $("#btnPostAPICall").click(function () { RenderContent(); });
 });
@@ -21,17 +21,17 @@ function PostToSage() {
     });
 }
 
-function handle_btnSubmitPuzzle_click() {
+function Handle_btnSubmitPuzzle_Click() {
     var pageSudokuPuzzle = $('#sudokustring').val();
-    showSudokuPuzzleNoAjax(pageSudokuPuzzle);
-    showSudokuPuzzle(pageSudokuPuzzle);
+    ShowSudokuPuzzleNoAjax(pageSudokuPuzzle);
+    //ShowSudokuPuzzle(pageSudokuPuzzle);
 }
 
-function showSudokuPuzzleNoAjax(data) {
+function ShowSudokuPuzzleNoAjax(data) {
     document.location.href = "/Sudoku/Sudoku?puzzleInputs=" + data;
 }
 
-function showSudokuPuzzle(data) {
+function ShowSudokuPuzzle(data) {
     $.ajax({
         type: "POST",
         url: '/Sudoku/Sudoku/',

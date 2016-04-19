@@ -1,0 +1,24 @@
+﻿@model SageOneSample.Models.SudokuViewModel
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+<div>
+    <table>
+
+        @for (int rowCount = 0; rowCount < 9; rowCount++)
+            {
+            <tr>
+
+                @for (int colCount = 0; colCount < 9; colCount++)
+                {
+                    <td> @Html.Encode(Model.PuzzlePieces[rowCount * 9 + colCount])</td>
+                }
+            </tr>
+        }
+    </table>
+</div>
+<div>Solve the puzzle: <input type="hidden" value="@Model.puzzleString" id="hdnPuzzleString" /> <input type="button" value="Solve" id="btnSolve" /> </div>
+<div>Re-enter puzzle:  <input type="button" value="Retry" id="btnRetry" /> </div>
