@@ -14,6 +14,11 @@ namespace SageOneSample.Repository
             throw new NotImplementedException();
         }
 
+        public Puzzle GetSolutionById(string id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Puzzle GetSolutionByPuzzle(string partialPuzzle)
         {
             throw new NotImplementedException();

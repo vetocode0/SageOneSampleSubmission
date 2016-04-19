@@ -7,31 +7,31 @@ using System.Web.Http;
 
 namespace SageOneSample.Controllers
 {
-    public class ValuesController : ApiController
+    public class SudokuAPIController : ApiController
     {
-        // GET api/values
+        // GET: api/SudokuAPI
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
+        // GET: api/SudokuAPI/5
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/values
+        // POST: api/SudokuAPI
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/values/5
+        // PUT: api/SudokuAPI/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE: api/SudokuAPI/5
         public void Delete(int id)
         {
         }

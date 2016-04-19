@@ -9,6 +9,7 @@ namespace SageOneSample.Repository
 {
     public interface ISudokuSolutionsRepository
     {
+        Puzzle GetSolutionById(string id);
         Puzzle GetSolutionByPuzzle(string partialPuzzle);
         Puzzle GetSample();
         

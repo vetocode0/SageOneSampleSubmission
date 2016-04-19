@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedObjects", "SharedObje
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationLayer", "PresentationLayer", "{8A1FD3E4-4F0E-457C-BE22-34BC5DF7B86F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SageOneSample", "SageOneSample\SageOneSample.csproj", "{61047C7F-2E59-424C-B631-58A121EFC57B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SageOneSample.Presentaion", "SageOneSample\SageOneSample.Presentaion.csproj", "{61047C7F-2E59-424C-B631-58A121EFC57B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SageOneSample.Business", "SageOneSample.Business\SageOneSample.Business.csproj", "{87043FBA-F8D3-4001-B0AD-7B308BF68E6A}"
 EndProject

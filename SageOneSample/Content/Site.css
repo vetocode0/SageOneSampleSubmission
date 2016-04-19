@@ -15,3 +15,36 @@ select,
 textarea {
     max-width: 280px;
 }
+table, td{
+    border: 1px solid black;
+}
+tr{
+    height: 25px;
+}
+td{
+    width: 25px;
+}
+td + td + td{
+    border-right: 5px solid black !important;
+}
+td + td + td + td{
+    border-right: 1px solid black !important;
+}
+td + td + td + td + td + td{
+    border-right: 5px solid black !important;
+}
+td + td + td + td + td + td + td{
+    border-right: 1px solid black !important;
+}
+tr + tr + tr {
+    border-bottom: 5px solid black !important;
+}
+tr + tr + tr + tr  {
+    border-bottom: 1px solid black !important;
+}
+tr + tr + tr + tr + tr + tr  {
+    border-bottom: 5px solid black !important;
+}
+tr + tr + tr + tr + tr + tr + tr {
+    border-bottom: 1px solid black !important;
+}
